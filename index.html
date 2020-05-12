@@ -8,9 +8,35 @@
   </head>
   <body>
     <div id="app">
-      {{ message }}!!!
+      <div class="wrap">
+        <!-- musicplayer -->
+        <div class="play-wrap" id="player">
+          <div class="search-bar">
+            <img src="" alt="" />
+            <!-- search music -->
+            <input type="text" autocomplete="off" />
+          </div>
+          <div class="center-con">
+            <!-- search-list -->
+            <div class="song-wrapper">
+              <ul class="song-list">
+                <li><a href=""></a></li>
+              </ul>
+              <img src="" alt="" />
+            </div>
+          </div>
+          <!-- thecontainer of music  -->
+          <div class="player-con">
+            <img src="" alt="" class="play-bar" />
+            <!-- 黑胶唱片 -->
+            <img src="" alt="" class="disc autoRotate" />
+            <img src="" alt="" class="cover sutoRotate" />
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
