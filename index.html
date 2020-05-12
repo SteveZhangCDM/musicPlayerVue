@@ -14,7 +14,12 @@
           <div class="search-bar">
             <img src="" alt="" />
             <!-- search music -->
-            <input type="text" autocomplete="off" />
+            <input
+              type="text"
+              autocomplete="off"
+              v-model="query"
+              @keyup.enter="searchMusic"
+            />
           </div>
           <div class="center-con">
             <!-- search-list -->
