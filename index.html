@@ -26,18 +26,29 @@
             <div class="song-wrapper">
               <ul class="song-list">
                 <li v-for="item in musicList">
-                  <a href=""></a><b>{{item.name}}</b>
+                  <a href="" @click="playMusic(item.id)">X</a
+                  ><b>{{item.name}}</b>
                 </li>
               </ul>
               <img src="" alt="" />
             </div>
           </div>
-          <!-- thecontainer of music  -->
+          <!-- the container of music  -->
           <div class="player-con">
             <img src="" alt="" class="play-bar" />
             <!-- 黑胶唱片 -->
             <img src="" alt="" class="disc autoRotate" />
             <img src="" alt="" class="cover sutoRotate" />
+          </div>
+          <div class="audio-con">
+            <audio
+              :src="musicUrl"
+              ref="audio"
+              controls
+              autoplay
+              loop
+              class="myaudio"
+            ></audio>
           </div>
         </div>
       </div>
