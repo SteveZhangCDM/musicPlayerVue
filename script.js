@@ -6,9 +6,10 @@ var app = new Vue({
   },
   methods: {
     searchMusic: function () {
+      let that = this;
       axios.get('https://autumnfish.cn/search?keywords=' + this.query).then(
         function (response) {
-          console.log(response);
+          that.musicList = response.data.result.songs;
         },
         function (err) {
           console.log(err);

@@ -25,7 +25,9 @@
             <!-- search-list -->
             <div class="song-wrapper">
               <ul class="song-list">
-                <li><a href=""></a></li>
+                <li v-for="item in musicList">
+                  <a href=""></a><b>{{item.name}}</b>
+                </li>
               </ul>
               <img src="" alt="" />
             </div>
